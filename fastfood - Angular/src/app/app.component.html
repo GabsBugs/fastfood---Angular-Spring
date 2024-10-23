@@ -1,0 +1,35 @@
+<mat-toolbar class="navbar">
+  <span class="logo">Fast Food Manager</span>
+  <span class="spacer"></span>
+  <nav>
+    <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</button>
+    <button mat-button routerLink="/order-form" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Fazer Pedido</button>
+    <button mat-button routerLink="/order-list" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Pedidos</button>
+    <button mat-button routerLink="/menu" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Cardápio</button>
+    <button mat-button routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Sobre</button>
+  </nav>
+</mat-toolbar>
+
+<div class="app-container">
+  <header class="header">
+    <h1>Bem-vindo ao Fast Food Manager!</h1>
+    <p>Gerencie seus pedidos de forma rápida e eficiente.</p>
+    <button mat-raised-button color="accent" routerLink="/order-form" class="cta-button">Comece Agora</button>
+  </header>
+
+  <router-outlet></router-outlet>
+
+  <section class="resources">
+    <h2>Recursos do Fast Food Manager</h2>
+    <ul>
+      <li><mat-icon>check_circle</mat-icon> Gerenciamento de Pedidos em Tempo Real</li>
+      <li><mat-icon>check_circle</mat-icon> Interface Amigável e Intuitiva</li>
+      <li><mat-icon>check_circle</mat-icon> Atualizações Instantâneas do Cardápio</li>
+      <li><mat-icon>check_circle</mat-icon> Histórico de Pedidos e Relatórios</li>
+    </ul>
+  </section>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2024 Fast Food Manager. Todos os direitos reservados.</p>
+</footer>

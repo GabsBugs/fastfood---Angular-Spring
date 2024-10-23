@@ -1,0 +1,21 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="order-form">
+  <h2>Pedido</h2>
+  <div>
+    <label for="customerName">Nome do Cliente:</label>
+    <input id="customerName" formControlName="customerName" required />
+  </div>
+
+  <h3>Itens do Pedido:</h3>
+  <div formArrayName="items">
+    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-group">
+      <label for="itemName">Item:</label>
+      <input id="itemName" formControlName="itemName" required />
+      <label for="quantity">Quantidade:</label>
+      <input id="quantity" formControlName="quantity" type="number" min="1" required />
+      <button type="button" (click)="removeItem(i)">Remover</button>
+    </div>
+  </div>
+
+  <button type="button" (click)="addItem()">Adicionar Item</button>
+  <button type="submit" [disabled]="orderForm.invalid">Enviar Pedido</button>
+</form>

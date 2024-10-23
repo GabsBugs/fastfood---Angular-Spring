@@ -1,0 +1,115 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F2CEE9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-header {
+  background-color: #BF93BF;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar button:hover {
+  color: #F2CEE9;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.orders-table th {
+  background-color: #BF93BF;
+  color: white;
+}
+
+.orders-table tr:hover {
+  background-color: rgba(190, 147, 191, 0.1);
+}
+
+.action-button {
+  background-color: #BF93BF;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #0F468C;
+}
+
+.app-footer {
+  background-color: #0E3A73;
+  color: #ddd;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0 0 12px 12px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar button {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .orders-table {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,36 @@
+.order-list {
+  margin: 20px 0; /* Espaçamento em torno da lista */
+}
+
+.order-item {
+  padding: 15px; /* Espaçamento interno */
+  border: 1px solid #ddd; /* Borda padrão */
+  border-radius: 8px; /* Cantos arredondados */
+  margin-bottom: 15px; /* Espaço abaixo de cada pedido */
+  background-color: #f9f9f9; /* Cor de fundo clara */
+}
+
+.loading-message {
+  font-size: 1.2rem; /* Tamanho da fonte */
+  color: #666; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+}
+
+.no-orders {
+  text-align: center; /* Centraliza o texto */
+  color: #999; /* Cor do texto */
+}
+
+.btn-cancel {
+  background-color: #BF93BF; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove bordas */
+  padding: 10px 15px; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Muda o cursor para pointer */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.btn-cancel:hover {
+  background-color: #0F468C; /* Cor ao passar o mouse */
+}

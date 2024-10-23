@@ -1,0 +1,118 @@
+/* Estilo do campo de entrada do nome do cliente e outros campos de entrada */
+.form-control {
+  width: 100%; /* Garante que o campo ocupe toda a largura disponível */
+  max-width: 600px; /* Define uma largura máxima para evitar que fique muito largo */
+  padding: 12px; /* Aumenta o espaçamento interno do campo de entrada */
+  margin-bottom: 15px; /* Espaço abaixo do campo de entrada */
+  border: 1px solid #ccc; /* Borda padrão */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1rem; /* Tamanho da fonte do texto */
+}
+
+/* Estilo do formulário */
+.order-form {
+  display: flex; /* Utiliza flexbox para melhor disposição dos elementos */
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  max-width: 700px; /* Define uma largura máxima para o formulário */
+  margin: 0 auto; /* Centraliza o formulário na tela */
+  padding: 20px; /* Espaço interno do formulário */
+  border: 1px solid #ccc; /* Borda ao redor do formulário */
+  border-radius: 10px; /* Cantos arredondados do formulário */
+  background-color: rgba(249, 249, 249, 0.9); /* Cor de fundo do formulário com leve transparência */
+  backdrop-filter: blur(10px); /* Efeito de desfoque do fundo */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari 9+ */
+}
+
+/* Estilo dos botões */
+.remove-item-button,
+.add-item-button,
+.submit-button {
+  background-color: #BF93BF; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto */
+  border: none; /* Remove bordas */
+  padding: 12px; /* Aumenta o espaçamento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  cursor: pointer; /* Muda o cursor para pointer */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+  font-size: 1rem; /* Tamanho da fonte */
+  display: block; /* Faz o botão ocupar toda a linha */
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza o texto do botão */
+}
+
+/* Botão de remover com tamanho e espaçamento específicos */
+.remove-item-button {
+  padding: 10px; /* Ajusta o padding para o botão de remover */
+  font-size: 1rem; /* Tamanho da fonte ajustado */
+  margin-top: 15px; /* Espaço acima do botão de remover */
+}
+
+/* Efeitos ao passar o mouse */
+.remove-item-button:hover,
+.add-item-button:hover,
+.submit-button:hover {
+  background-color: #0F468C; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.05); /* Aumenta ligeiramente o botão ao passar o mouse */
+}
+
+/* Estilo para o botão de adicionar */
+.add-item-button {
+  margin: 15px 0; /* Espaço acima e abaixo do botão de adicionar */
+}
+
+/* Estilo para o botão de envio */
+.submit-button {
+  margin-top: 20px; /* Espaço acima do botão de envio */
+}
+
+/* Estilo para o grupo de itens */
+.item-group {
+  margin-bottom: 20px; /* Espaço abaixo do grupo de itens */
+  display: flex; /* Flexbox para alinhar os campos */
+  flex-direction: column; /* Cada campo em uma linha */
+  width: 100%; /* Faz o grupo ocupar toda a largura */
+}
+
+/* Estilo dos campos de entrada dos itens */
+.item-group input {
+  width: 100%; /* Para garantir que os campos ocupem toda a largura disponível */
+  padding: 10px; /* Espaçamento interno dos campos */
+  margin-bottom: 10px; /* Espaço abaixo de cada campo de item */
+  border: 1px solid #ccc; /* Borda padrão */
+  border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Estilo para os rótulos (labels) */
+.item-group label {
+  margin-top: 10px; /* Espaço acima de cada rótulo */
+  font-weight: bold; /* Destaque para os rótulos */
+}
+
+/* Estilo para a mensagem de sucesso */
+.success-message {
+  color: #28a745; /* Cor verde para mensagem de sucesso */
+  font-size: 1.1rem; /* Tamanho da fonte aumentado */
+  margin-top: 20px; /* Espaço acima da mensagem */
+}
+
+/* Estilo para a mensagem de carregamento */
+.loading-message {
+  color: #007bff; /* Cor azul para mensagem de carregamento */
+  font-style: italic; /* Itálico para diferenciar */
+  margin-top: 20px; /* Espaço acima da mensagem */
+}
+
+/* Estilo para campos em foco */
+.form-control:focus {
+  border-color: #BF93BF; /* Cor ao focar no campo */
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 5px rgba(191, 147, 191, 0.5); /* Sombra sutil */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 600px) {
+  .order-form {
+    padding: 10px; /* Reduzir o padding em telas menores */
+  }
+}

@@ -1,0 +1,30 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="order-form">
+  <h2>Pedido</h2>
+  <div>
+    <label for="customerName">Nome do Cliente:</label>
+    <input id="customerName" formControlName="customerName" required class="form-control" />
+  </div>
+
+  <h3>Itens do Pedido:</h3>
+  <div formArrayName="items">
+    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-group">
+      <label for="itemName-{{i}}">Item:</label>
+      <input id="itemName-{{i}}" formControlName="itemName" required class="form-control" />
+
+      <label for="quantity-{{i}}">Quantidade:</label>
+      <input id="quantity-{{i}}" formControlName="quantity" type="number" min="1" required class="form-control" />
+
+      <label for="price-{{i}}">Preço:</label>
+      <input id="price-{{i}}" formControlName="price" type="number" min="0" step="0.01" required class="form-control" />
+
+      <button type="button" class="remove-item-button" (click)="removeItem(i)">Remover</button>
+    </div>
+  </div>
+
+  <button type="button" class="add-item-button" (click)="addItem()">Adicionar Item</button>
+  <button type="submit" class="submit-button" [disabled]="orderForm.invalid || loading">Enviar Pedido</button>
+
+  <div *ngIf="submitted && !loading" class="success-message">
+    Pedido enviado com sucesso!
+  </div>
+</form>

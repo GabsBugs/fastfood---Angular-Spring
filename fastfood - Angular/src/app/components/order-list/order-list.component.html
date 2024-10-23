@@ -1,0 +1,21 @@
+<div class="order-list">
+  <h2>Lista de Pedidos</h2>
+
+  <div *ngIf="loading" class="loading-message">Carregando...</div>
+
+  <div *ngIf="orders.length === 0 && !loading" class="no-orders">
+    <p>Não há pedidos disponíveis no momento.</p>
+  </div>
+
+  <div *ngFor="let order of orders" class="order-item">
+    <p><strong>Cliente:</strong> {{ order.customerName }}</p>
+
+    <p><strong>Itens:</strong></p>
+    <ul>
+      <li *ngFor="let item of order.items">
+        <strong>{{ item.itemName }}</strong> - Quantidade: {{ item.quantity }}
+      </li>
+    </ul>
+
+  </div>
+</div>

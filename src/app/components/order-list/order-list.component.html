@@ -1,0 +1,35 @@
+<div class="order-list">
+  <h2>Lista de Pedidos</h2>
+
+  <!-- Exibe uma mensagem quando não há pedidos disponíveis -->
+  <div *ngIf="orders.length === 0" class="no-orders">
+    <p>Não há pedidos disponíveis no momento.</p>
+  </div>
+
+  <!-- Loop através da lista de pedidos -->
+  <div *ngFor="let order of orders" class="order-item">
+    <h3>Pedido #{{ order.id }}</h3>
+
+    <!-- Exibe o nome do cliente -->
+    <p><strong>Cliente:</strong> {{ order.customerName }}</p>
+
+    <!-- Exibe a data do pedido formatada -->
+    <p><strong>Data do Pedido:</strong> {{ order.orderDate | date:'short' }}</p>
+
+    <!-- Exibe a lista de itens do pedido -->
+    <p><strong>Itens:</strong></p>
+    <ul>
+      <li *ngFor="let item of order.items">
+        <!-- Exibe o ID do produto e a quantidade -->
+        <strong>Produto ID:</strong> {{ item.productId }} -
+        <strong>Quantidade:</strong> {{ item.quantity }}
+      </li>
+    </ul>
+
+    <!-- Divisão para ações relacionadas ao pedido -->
+    <div class="order-actions">
+      <!-- Botão para cancelar o pedido -->
+      <button class="btn-cancel" (click)="cancelOrder(order.id)">Cancelar Pedido</button>
+    </div>
+  </div>
+</div>

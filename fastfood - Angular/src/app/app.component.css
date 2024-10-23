@@ -1,0 +1,128 @@
+html, body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #F5F5F5;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  background-color: #F2CEE9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-header {
+  background-color: #BF93BF;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.navbar {
+  background-color: #BF93BF;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  position: relative;
+}
+
+.navbar nav {
+  display: flex;
+}
+
+.navbar button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar button:hover {
+  color: #F2CEE9;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.active {
+  color: #0F468C;
+  font-weight: 600;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.app-footer {
+  background-color: #0E3A73;
+  color: #ddd;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.toggle-button {
+  background-color: #BF93BF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #0F468C;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar button {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .product-card {
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,40 @@
+<div class="app-container">
+  <main>
+    <h1 class="page-title">Lista de Pedidos</h1>
+
+    <!-- Tabela de pedidos -->
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>ID do Pedido</th>
+          <th>Cliente</th>
+          <th>Itens</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exibe uma mensagem quando não há pedidos -->
+        <tr *ngIf="orders.length === 0">
+          <td colspan="5" class="no-orders">Não há pedidos disponíveis no momento.</td>
+        </tr>
+        <!-- Loop através da lista de pedidos -->
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.customerName }}</td> <!-- Alterado de 'client' para 'customerName' -->
+          <td>
+            <ul>
+              <li *ngFor="let item of order.items">
+                {{ item.itemName }} ({{ item.quantity }}) <!-- Certifique-se que itemName e quantity existem -->
+              </li>
+            </ul>
+          </td>
+          <td>{{ order.status }}</td>
+          <td>
+            <button class="action-button" (click)="viewDetails(order.id)">Detalhes</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</div>
